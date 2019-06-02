@@ -1,0 +1,103 @@
+<!-- constructia tabelului/orarului grupei 233, pe baza datelor introduse in "group.component.ts"
+      structura tabelului este clasica, folosind tag-urile "table", "tr", "th", "td"
+      pentru structurarea/afisarea cursurilor pe o celula alcatuita din 4 randuri si o coloana este folosita proprietaea <<rowspan="4">>,
+          care unifica randurile, intru unul singur, pentru a evidentia faptul ca acele cursrui se desfasoara atat in saptamanile pare, cat si in cele imapre
+      pentru structurarea/afisarea cursurilor/seminarelor/laboratoarelor pe jumatate de celula este folosita proprietatea <<rowspan="2">>
+      pentru structurarea/afisarea laboratoarelor pe 1/4 de celula NU se foloseste prop. "rowspan"
+      pentru imbinarea randurilor goale se foloseste <<rowspan="2/3/4">>-->
+
+ <!-- variabilele pentru afisare sunt scrise in interiorul unei acolade duble-->
+
+<table class="tg">
+  <tr>
+    <th class="tg-s6z2">Orar</th>
+    <th class="tg-0lax"><br>08:00 - 10:00</th>
+    <th class="tg-0lax"><br>10:00 - 12:00</th>
+    <th class="tg-0lax"><br>12:00 - 14:00</th>
+    <th class="tg-0lax"><br>14:00 - 16:00</th>
+    <th class="tg-0lax"><br>16:00 - 18:00</th>
+    <th class="tg-0lax"><br>18:00 - 20:00</th>
+  </tr>
+  <tr>
+    <td rowspan="4" class="tg-baqh"><br> <br> <br>Luni</td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"><br> <br>{{group233[0].classType}} <br> {{group233[0].teacher}} {{group233[0].roomType}}: {{group233[0].roomNumber}}</td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr></tr>
+  <tr>
+    <td rowspan="4" class="tg-baqh"><br> <br> <br>Marti</td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[1].classType}} <br> {{group233[1].teacher}} {{group233[1].roomType}}: {{group233[1].roomNumber}}</td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[2].classType}} <br> {{group233[2].teacher}} {{group233[2].roomType}}: {{group233[2].roomNumber}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[3].classType}} <br> {{group233[3].teacher}} {{group233[3].roomType}}: {{group233[3].roomNumber}}</td>
+    <td rowspan="2" class="t2"></td>
+    <td class="t1">{{group233[6].classType}} <br> {{group233[6].teacher}} {{group233[6].roomType}}: {{group233[6].roomNumber}} Grupa:{{group233[6].id}}</td>
+    <td rowspan="4" class="t4"></td>
+  </tr>
+  <tr>
+    <td rowspan="3" class="t3"></td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="t2"><br>{{group233[4].classType}} <br> {{group233[4].teacher}} {{group233[4].roomType}}: {{group233[4].roomNumber}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[5].classType}} <br> {{group233[5].teacher}} {{group233[5].roomType}}: {{group233[5].roomNumber}}</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td rowspan="4" class="tg-baqh"><br> <br> <br>Miercuri</td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[7].classType}} <br> {{group233[7].teacher}} {{group233[7].roomType}}: {{group233[7].roomNumber}}</td>
+    <td rowspan="3" class="t3"></td>
+    <td class="t1"></td>
+    <td class="t1"></td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[13].classType}} <br> {{group233[13].teacher}} {{group233[13].roomType}}: {{group233[13].roomNumber}}</td>
+  </tr>
+  <tr>
+    <td class="t1">{{group233[9].classType}} <br> {{group233[9].teacher}} {{group233[9].roomType}}: {{group233[9].roomNumber}} Grupa:{{group233[9].id}}</td>
+    <td class="t1">{{group233[10].classType}} <br> {{group233[10].teacher}} {{group233[10].roomType}}: {{group233[10].roomNumber}} Grupa:{{group233[10].id}}</td>
+  </tr>
+  <tr>
+    <td class="t1">{{group233[11].classType}} <br> {{group233[11].teacher}} {{group233[11].roomType}}: {{group233[11].roomNumber}} Grupa:{{group233[11].id}}</td>
+    <td class="t1">{{group233[12].classType}} <br> {{group233[12].teacher}} {{group233[12].roomType}}: {{group233[12].roomNumber}} Grupa:{{group233[12].id}}</td>
+  </tr>
+  <tr>
+    <td class="t1">{{group233[8].classType}} <br> {{group233[8].teacher}} {{group233[8].roomType}}: {{group233[8].roomNumber}} Grupa:{{group233[8].id}}</td>
+    <td class="t1"></td>
+    <td class="t1"></td>
+  </tr>
+  <tr>
+    <td rowspan="4" class="tg-baqh"><br> <br> <br>Joi</td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[14].classType}} <br> {{group233[14].teacher}} {{group233[14].roomType}}: {{group233[14].roomNumber}}</td>
+    <td class="t1">{{group233[15].classType}} <br> {{group233[15].teacher}} {{group233[15].roomType}}: {{group233[15].roomNumber}} Grupa:{{group233[15].id}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[18].classType}} <br> {{group233[18].teacher}} {{group233[18].roomType}}: {{group233[18].roomNumber}} Grupa:{{group233[18].id}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[20].classType}} <br> {{group233[20].teacher}} {{group233[20].roomType}}: {{group233[20].roomNumber}} Grupa:{{group233[20].id}}</td>
+  </tr>
+  <tr>
+    <td class="t1">{{group233[16].classType}} <br> {{group233[16].teacher}} {{group233[16].roomType}}: {{group233[16].roomNumber}} Grupa:{{group233[16].id}} </td>
+
+  </tr>
+  <tr>
+    <td rowspan="2" class="t2"><br>{{group233[17].classType}} <br> {{group233[17].teacher}} {{group233[17].roomType}}: {{group233[17].roomNumber}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[19].classType}} <br> {{group233[19].teacher}} {{group233[19].roomType}}: {{group233[19].roomNumber}} Grupa:{{group233[19].id}}</td>
+    <td rowspan="2" class="t2"><br>{{group233[20].classType}} <br> {{group233[20].teacher}} {{group233[20].roomType}}: {{group233[20].roomNumber}} Grupa:{{group233[20].id}}</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td rowspan="4" class="tg-baqh"><br> <br> <br>Vineri</td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[22].classType}} <br> {{group233[22].teacher}} {{group233[22].roomType}}: {{group233[22].roomNumber}}</td>
+    <td rowspan="4" class="t4"><br> <br> <br>{{group233[23].classType}} <br> {{group233[23].teacher}} {{group233[23].roomType}}: {{group233[23].roomNumber}}</td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+    <td rowspan="4" class="t4"></td>
+  </tr>
+  <tr></tr>
+  <tr></tr>
+  <tr></tr>
+</table>

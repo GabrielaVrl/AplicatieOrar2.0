@@ -1,0 +1,287 @@
+<div class="buttonsMenu">
+  <!-- la actionarea butonului se actioneaza functia toogle1() -->
+  <button (click)="toogle1()" id="buttonGroup">
+    GRUPA
+  </button>
+  <!-- la actionarea butonului se actioneaza functia toogle2() -->
+  <button (click)="toogle2()" id="buttonProfessor">
+    PROFESOR
+  </button>
+  <!-- la actionarea butonului se actioneaza functia toogle3() -->
+  <button (click)="toogle3()" id="buttonSubject">
+    MATERIE
+  </button>
+  <!-- la actionarea butonului se actioneaza functia toogle4() -->
+  <button (click)="toogle4()" id="buttonRoom">
+    SALA
+  </button>
+</div>
+
+<!-- se poate executa/se afiseaza select-ul doar daca variabila show1 are valuarea TRUE/1;
+      acest lucru reprezinta faptul ca butonul a fost actionat-->
+<div *ngIf="show1==1" class="buttonGroupContent">
+  <!--este sesizat faptul ca un eveniment/o actiune a avut loc (in cazul acestea selectarea unei valori din select) si
+      se apeleaza functia selectChangeHandler($event)-->
+  <select (change)="selectChangeHandler($event)">
+    <option>Alegere grupa</option>
+    <option>101</option>
+    <option>102</option>
+    <option>103</option>
+    <option>104</option>
+    <option>111</option>
+    <option>112</option>
+    <option>113</option>
+    <option>131</option>
+    <option>132</option>
+    <option>133</option>
+    <option>134</option>
+    <option>135</option>
+    <option>141</option>
+    <option>142</option>
+    <option>143</option>
+    <option>144</option>
+    <option>151</option>
+    <option>152</option>
+    <option>153</option>
+    <option>154</option>
+    <option>201</option>
+    <option>211</option>
+    <option>212</option>
+    <option>221</option>
+    <option>222</option>
+    <option>231</option>
+    <option>232</option>
+    <option>233</option>
+    <option>234</option>
+    <option>241</option>
+    <option>242</option>
+    <option>243</option>
+    <option>244</option>
+    <option>251</option>
+    <option>252</option>
+    <option>253</option>
+    <option>254</option>
+    <option>301</option>
+    <option>311</option>
+    <option>321</option>
+    <option>331</option>
+    <option>332</option>
+    <option>333</option>
+    <option>334</option>
+    <option>335</option>
+    <option>341</option>
+    <option>342</option>
+    <option>343</option>
+    <option>344</option>
+    <option>351</option>
+    <option>352</option>
+    <option>353</option>
+    <option>354</option>
+    <option>451</option>
+    <option>452</option>
+    <option>453</option>
+    <option>454</option>
+    <option>403</option>
+    <option>405</option>
+    <option>406</option>
+    <option>407</option>
+    <option>408</option>
+    <option>410</option>
+    <option>501</option>
+    <option>503</option>
+    <option>505</option>
+    <option>507</option>
+    <option>508</option>
+    <option>510</option>
+  </select>
+
+  <!--se testeaza daca valoarea aleasa din select este "233";
+      daca da, se afiseaza continutul tag-ului "app-group" (ce contine datele/tabelul reprezentand orarul grupei 233)-->
+  <div *ngIf="selectedGroup==233">
+    <br />
+    <app-group></app-group>
+  </div>
+
+</div>
+
+<!-- se poate executa/se afiseaza select-ul doar daca variabila show2 are valuarea TRUE/1; acest lucru reprezinta faptul ca butonul a fost actionat-->
+<div *ngIf="show2==1" class="buttonProfessorContent">
+  <select>
+    <option>Alegere profesor</option>
+    <option>Prof1</option>
+    <option>Prof2</option>
+  </select>
+</div>
+
+
+<!-- se poate executa/se afiseaza select-ul doar daca variabila show3 are valuarea TRUE/1; acest lucru reprezinta faptul ca butonul a fost actionat-->
+<div class="buttonSubjectContentAll">
+  <div *ngIf="show3==1" class="buttonSubjectContent">
+    <select class="select1">
+      <option>Materie1</option>
+      <option>Materie2</option>
+    </select>
+  </div>
+
+  <!-- se poate executa/se afiseaza select-ul doar daca variabila show3 are valuarea TRUE/1; acest lucru reprezinta faptul ca butonul a fost actionat-->
+  <div *ngIf="show3==1" class="buttonSubjectContent">
+    <select class="select2">
+      <option>Alegere grupa</option>
+      <option>101</option>
+      <option>102</option>
+      <option>103</option>
+      <option>104</option>
+      <option>111</option>
+      <option>112</option>
+      <option>113</option>
+      <option>131</option>
+      <option>132</option>
+      <option>133</option>
+      <option>134</option>
+      <option>135</option>
+      <option>141</option>
+      <option>142</option>
+      <option>143</option>
+      <option>144</option>
+      <option>151</option>
+      <option>152</option>
+      <option>153</option>
+      <option>154</option>
+      <option>201</option>
+      <option>211</option>
+      <option>212</option>
+      <option>221</option>
+      <option>222</option>
+      <option>231</option>
+      <option>232</option>
+      <option>233</option>
+      <option>234</option>
+      <option>241</option>
+      <option>242</option>
+      <option>243</option>
+      <option>244</option>
+      <option>251</option>
+      <option>252</option>
+      <option>253</option>
+      <option>254</option>
+      <option>301</option>
+      <option>311</option>
+      <option>321</option>
+      <option>331</option>
+      <option>332</option>
+      <option>333</option>
+      <option>334</option>
+      <option>335</option>
+      <option>341</option>
+      <option>342</option>
+      <option>343</option>
+      <option>344</option>
+      <option>351</option>
+      <option>352</option>
+      <option>353</option>
+      <option>354</option>
+      <option>451</option>
+      <option>452</option>
+      <option>453</option>
+      <option>454</option>
+      <option>403</option>
+      <option>405</option>
+      <option>406</option>
+      <option>407</option>
+      <option>408</option>
+      <option>410</option>
+      <option>501</option>
+      <option>503</option>
+      <option>505</option>
+      <option>507</option>
+      <option>508</option>
+      <option>510</option>
+    </select>
+  </div>
+</div>
+
+<!-- se poate executa/se afiseaza select-ul doar daca variabila show4 are valuarea TRUE/1; acest lucru reprezinta faptul ca butonul a fost actionat-->
+<div class="buttonRoomContentAll">
+  <div *ngIf="show4==1" class="buttonRoomContent">
+    <select>
+      <option>Sala1</option>
+      <option>Sala2</option>
+    </select>
+  </div>
+
+  <!-- se poate executa/se afiseaza select-ul doar daca variabila show4 are valuarea TRUE/1; acest lucru reprezinta faptul ca butonul a fost actionat-->
+  <div *ngIf="show4==1" class="buttonRoomContent">
+    <select>
+      <option>Alegere grupa</option>
+      <option>101</option>
+      <option>102</option>
+      <option>103</option>
+      <option>104</option>
+      <option>111</option>
+      <option>112</option>
+      <option>113</option>
+      <option>131</option>
+      <option>132</option>
+      <option>133</option>
+      <option>134</option>
+      <option>135</option>
+      <option>141</option>
+      <option>142</option>
+      <option>143</option>
+      <option>144</option>
+      <option>151</option>
+      <option>152</option>
+      <option>153</option>
+      <option>154</option>
+      <option>201</option>
+      <option>211</option>
+      <option>212</option>
+      <option>221</option>
+      <option>222</option>
+      <option>231</option>
+      <option>232</option>
+      <option>233</option>
+      <option>234</option>
+      <option>241</option>
+      <option>242</option>
+      <option>243</option>
+      <option>244</option>
+      <option>251</option>
+      <option>252</option>
+      <option>253</option>
+      <option>254</option>
+      <option>301</option>
+      <option>311</option>
+      <option>321</option>
+      <option>331</option>
+      <option>332</option>
+      <option>333</option>
+      <option>334</option>
+      <option>335</option>
+      <option>341</option>
+      <option>342</option>
+      <option>343</option>
+      <option>344</option>
+      <option>351</option>
+      <option>352</option>
+      <option>353</option>
+      <option>354</option>
+      <option>451</option>
+      <option>452</option>
+      <option>453</option>
+      <option>454</option>
+      <option>403</option>
+      <option>405</option>
+      <option>406</option>
+      <option>407</option>
+      <option>408</option>
+      <option>410</option>
+      <option>501</option>
+      <option>503</option>
+      <option>505</option>
+      <option>507</option>
+      <option>508</option>
+      <option>510</option>
+    </select>
+  </div>
+</div>
